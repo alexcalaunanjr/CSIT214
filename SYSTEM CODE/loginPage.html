@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to UOW room booking system!</title>
+
+    <style>
+        img
+        {
+            height: 300px;
+            width: 300px;
+        }
+        .loginPage
+        {
+            padding-left: 50px;
+            font-family: Verdana,serif;
+            color: aliceblue;
+        }
+        .loginPage h1
+        {
+
+        }
+    </style>
+
+    <script>
+        function redirect()
+        {
+            var username = document.getElementById("username").value;
+            if(username === "staff")
+            {
+                location.href = "staff.html";
+            }
+            else if(username === "student")
+            {
+                location.href = "student.html";
+            }
+            else
+            {
+                alert("Invalid Input");
+            }
+        }
+    </script>
+</head>
+<body style="background-color: #001641">
+    <img src="images/logo.png" alt="logo"> <br>
+    <div class="loginPage">
+    <form action="javascript:redirect()">
+        <h1>Login</h1> <br>
+        <select>
+            
+        </select>
+        Username <br>
+        <input type="text" id="username" name="username" placeholder="Username"> <br>
+        Password <br>
+        <input type="password" id="passowrd" name="password"> <br>
+
+        <input type="submit" value="Login">
+    </form>
+    </div>
+</body>
+</html>
