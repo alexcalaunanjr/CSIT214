@@ -3,8 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <title>Student</title>
+    <style></style>
 </head>
 <body>
-<span style="font-size: 100px; font-weight: bold">Student</span>
+    <span style="font-size: 100px; font-weight: bold">Student</span>
+    <!-- FILE PICKER -->
+    <input type = "file" accept=".txt" id="filePicker" onchange="readFile()">
+
+    <!--  DISPLAY CSV HERE -->
+    <table id="table"></table>
+
+    <style>
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+    }
+    table {
+        border-collapse: collapse;
+    }
+    table td{
+        border: 1px solid black;
+    }
+    </style>
+
+    <script>
+        window.onload = () => {
+            // FILE READER + HTML ELEMENTS
+            var reader  = new FileReader(),
+                table   = document.getElementById("table"),
+                filePicker = document.getElementById("filePicker");
+
+            // READ CSV ON FILE PICK 
+            filePicker.onchange = () => reader.readAsText(filePicker.files[0]);
+
+            // READ THE CSV FILE & GENERATE HTML TABLE
+            reader.onloadend = () => {
+                // ENTIRE CSV FILE 
+                let csv = reader.result; 
+
+                // CLEAR HTML TABLE (IF ANY)
+                table.innerHTML = "";
+
+                // SPLIT CSV INTO ROWS
+                let rows = csv.split("\r\n");
+
+                // DISPLAY TABLE HEAD (FIRST ROW)
+                table.innerHTML += "<tr>" + rows[0].split(",").map(col => "<th>" + col + "</th>").join("") + "</tr>";
+
+                // LOOP THROUGH ROWS + SPLIT COLS EXCLUDING FIRST ROW
+                for(let i = 1; i < rows.length; i++) {
+                    table.innerHTML += "<tr>" + rows[i].split(",").map(col => "<td>" + col + "</td>").join("") + "</tr>";
+                }
+            };   
+        };
+    </script>
 </body>
 </html>
