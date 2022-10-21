@@ -7,14 +7,22 @@
     <style>
         img
         {
-            height: 300px;
-            width: 300px;
+            float: left;
+            height: 250px;
+            width: 250px;
+        }
+        .boarder
+        {
+            padding-top: 120px;
         }
         .loginPage
         {
-            padding-left: 50px;
+            background-color: #001641;
+            padding-left: 500px;
+            padding-bottom: 50px;
             font-family: Verdana,serif;
             color: aliceblue;
+            font-size: 14px;
         }
         .loginPage h1
         {
@@ -26,11 +34,13 @@
         function redirect()
         {
             var username = document.getElementById("username").value;
-            if(username === "staff")
+            var userType = document.getElementById("userType").value;
+
+            if(userType === "staff")
             {
                 location.href = "staff.html";
             }
-            else if(username === "student")
+            else if(userType === "student")
             {
                 location.href = "student.html";
             }
@@ -39,16 +49,24 @@
                 alert("Invalid Input");
             }
         }
+
+
     </script>
 </head>
-<body style="background-color: #001641">
-    <img src="images/logo.png" alt="logo"> <br>
+<body style="background-color: #dddddd">
+    <div class="boarder">
+
+
+    </div>
     <div class="loginPage">
-    <form action="javascript:redirect()">
+        <img src="images/logo.png" alt="logo"> <br>
+    <form method="post" action="javascript:redirect()">
         <h1>Login</h1> <br>
-        <select>
-            
-        </select>
+        Select type of user:
+        <select id="userType">
+            <option value="staff">Staff</option>
+            <option value="student">Student</option>
+        </select> <br>
         Username <br>
         <input type="text" id="username" name="username" placeholder="Username"> <br>
         Password <br>
