@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <style></style>
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+            font-family: Verdana, Helvetica, sans-serif;
+        }
+
+        .logopic img
+        {
+            float: left;
+            height: 80px;
+            width: 80px;
+        }
+
+        .topnav
+        {
+            overflow: hidden;
+            background-color: #001641;
+        }
+
+        .topnav a
+        {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 30px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover
+        {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active
+        {
+            background-color: white;
+            color: black;
+        }
+
+        .logout
+        {
+            float: right;
+        }
+    </style>
+
+    <!-- TOP BAR NAVIGATION PANE-->
+    <div class="topnav">
+
+        <div class="logopic">
+            <img src="images/uowlogowhite.png">
+        </div>
+
+            <a class="active" href="staff_homePage.html">Home</a>
+            <a href="staff_bookingPage.html">Bookings</a>
+            <a href="staff_aboutPage.html">About</a>
+
+        <div class="logout">
+            <a href="loginPage.html">Log Out</a>
+        </div>
+
+    </div>
+
+    <div>
+        <h1>Hello, staff user (home page)!</h1>
+    </div>
+</body>
