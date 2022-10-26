@@ -52,6 +52,26 @@
             float: right;
         }
 
+        .box
+        {
+            background-color: lightgrey;
+            width: 95%;
+            border: 1px solid #7393B3;
+            padding: 10px;
+            margin: auto; 
+        }
+
+        .box p.emptybox
+        {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .box p.filledbox 
+        {
+            font-size: 15px;
+        }
+
         /* format for html table  */
         * {
             font-family: Arial, Helvetica, sans-serif;
@@ -79,20 +99,19 @@
         <div class="logout">
             <a href="loginPage.html">Log Out</a>
         </div>
-
     </div>
+    <br/><br/>
 
     <!-- CONVERTING DATABASE TO HTML -->
-    <div>
-        <h1>Hello, student user (booking page)!</h1>
-        <span style="font-size: 50px; font-weight: bold">Welcome User!~<br/></span>
+    <div class="box">
+        <h2 style="text-align: center">Group Discussion Groups</h2>
+        <p class="emptybox">(Venue: Interactive Lounge, Blk B Level 1)</p>
+
         <!-- FILE PICKER -->
         <input type = "file" accept=".txt" id="txtFile">
 
         <!--  DISPLAY CSV HERE -->
         <table id="table"></table>
-        <!-- <object data="listOfRooms_student.txt" id="txtFile"></object> -->
-        
         <script>
             window.onload = () => {
                 // FILE READER + HTML ELEMENTS
