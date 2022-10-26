@@ -51,6 +51,26 @@
         {
             float: right;
         }
+
+        .box
+        {
+            background-color: lightgrey;
+            width: 95%;
+            border: 1px solid #7393B3;
+            padding: 10px;
+            margin: auto; 
+        }
+
+        .box p.emptybox
+        {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .box p.filledbox 
+        {
+            font-size: 15px;
+        }
     </style>
 
     <!-- TOP BAR NAVIGATION PANE-->
@@ -67,10 +87,60 @@
         <div class="logout">
             <a href="loginPage.html">Log Out</a>
         </div>
-
     </div>
 
-    <div>
-        <h1>Hello, staff user (home page)!</h1>
+    <br/><br/>
+    
+    <div class="box">
+        <!-- underline text -->
+        <h3>Announcements</h3> 
+        <!-- line break -->
+        <hr/>
+        <p class="emptybox">There are no announcements</p>
     </div>
+    <br/><br/>
+
+    <div class="box">
+        <!-- underline text -->
+        <h3>Scheduled Events</h3> 
+        <!-- line break -->
+        <hr/>
+        <p class="emptybox">You have not scheduled any events</p>    
+    </div>
+    <br/><br/>
+
+    <div class="box">
+        <!-- underline text -->
+        <h3>Services for Staff</h3> 
+        <!-- line break -->
+        <hr/>
+        <p class="filledbox">Academic and professional staff have full access to all student services, as well as specialised help from our librarians.</p>
+        <h4>Subject Readings</h4>
+        <p class="filledbox">To assign reading material and other resources to students in your subject, use the Subject Readings tool that integrates with Moodle. The  
+            <a href="https://uow.libguides.com/subject-readings-staff" target="_blank">Subject Readings guide</a> can help you set up your list. You'll be able to start a new list or request a migration of previous resources.</p>
+
+        <h4>Ordering new resources via Library SEARCH</h4>
+        <p class="filledbox">Search for the resource in Library SEARCH. Ensure you select 'Show results outside UOW Library'. <br/>Click the item's title.</p>
+        <p class="filledbox">Under 'How to get it', select one of the following:</p>
+        <ul>
+            <li style="font-size: 15px">Purchase Request form: to ask the Library to purchase a new item for the collection.</li>
+            <li style="font-size: 15px">The relevant 'Get it' option: to either borrow a physical copy or get a digital chapter via
+                <a href="https://www.uow.edu.au/library/borrowing/borrowing-from-other-libraries/document-delivery/" target="_blank"> Document Delivery</a>.
+                 If there is no 'Get it' option, click the link to Document Delivery and fill in the blank request form.</li>
+        </ul>
+        <p class="filledbox">* You can also <a href="https://uow.libguides.com/subject-readings-staff/add-edit-tag#s-lg-box-22080204" target="_blank">
+        request items for your reading list via the Subject Readings tool.</a></p>
+
+        <h4>Book a consultation with a Librarian</h4>
+        <p class="filledbox">Contact our librarians to discuss your research and teaching needs or book a consultation (9am - 5pm, Mon - Fri).</p>
+        <ul>
+            <li style="font-size: 15px">Exploring research support at UOW?</li>
+            <li style="font-size: 15px">Reviewing your teaching and learning materials?</li>
+            <li style="font-size: 15px">Need to make Subject Readings available for your students?</li>
+            <li style="font-size: 15px">Developing your students' information and digital literacies?</li>
+            <li style="font-size: 15px">New to teaching at UOW?</li>
+        </ul>
+    </div>
+    <br/><br/>
+
 </body>

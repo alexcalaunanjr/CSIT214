@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>About Page</title>
     <style></style>
 </head>
@@ -10,6 +10,7 @@
         body {
             margin: 0;
             font-family: Verdana, Helvetica, sans-serif;
+            height: 100%;
         }
 
         .logopic img
@@ -51,6 +52,40 @@
         {
             float: right;
         }
+
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/banner_2.jpg");
+            height: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .hero-text {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+
+        .hero-text button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 10px 25px;
+            color: black;
+            background-color: #ddd;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .hero-text button:hover {
+            background-color: #555;
+            color: white;
+        }
     </style>
 
     <!-- TOP BAR NAVIGATION PANE-->
@@ -70,7 +105,11 @@
 
     </div>
 
-    <div>
-        <h1>Hello, staff user (about page)!</h1>
-    </div>
+    <div class="hero-image">
+        <div class="hero-text">
+          <h1>I am John Doe</h1>
+          <p>And I'm a Photographer</p>
+          <button>Hire me</button>
+        </div>
+      </div>
 </body>

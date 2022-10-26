@@ -56,14 +56,19 @@
         {
             background-color: lightgrey;
             width: 95%;
-            border: 2px solid cornflowerblue;
+            border: 1px solid #7393B3;
             padding: 10px;
             margin: auto; 
         }
 
-        .box p.boxcontent
+        .box p.emptybox
         {
             text-align: center;
+            font-size: 15px;
+        }
+
+        .box p.filledbox 
+        {
             font-size: 15px;
         }
     </style>
@@ -82,19 +87,15 @@
         <div class="logout">
             <a href="loginPage.html">Log Out</a>
         </div>
-
     </div>
+    <br/><br/>
 
-    <div>
-        <h1>Hello, student user (home page)!</h1>
-    </div>
-        
     <div class="box">
         <!-- underline text -->
         <h3>Announcements</h3> 
         <!-- line break -->
         <hr/>
-        <p class="boxcontent">There are no announcements</p>
+        <p class="emptybox">There are no announcements</p>
     </div>
     <br/><br/>
 
@@ -103,7 +104,7 @@
         <h3>Upcoming Reservations</h3> 
         <!-- line break -->
         <hr/>
-        <p class="boxcontent">You have no upcoming Reservations</p>    
+        <p class="emptybox">You have no upcoming Reservations</p>    
     </div>
     <br/><br/>
 
@@ -112,9 +113,28 @@
         <h3>Resource Availability</h3> 
         <!-- line break -->
         <hr/>
-        <p><b>Online Study Resources</b></p>
-        <p><a href="https://www.uow.edu.au/student/support-services/learning-development/resources/" target="_blank">Online study resources</a></p>
+        <p class="filledbox">Do you know where to find things? This WATTLE teaching and learning resource hub provides links to information 
+            about UOW professional development, recognition, strategy and policy, curriculum and teaching resources, as well as 
+            external links regarding teaching and learning in higher education. Members and colleagues are warmly invited to
+        <a href="https://outlook.office.com/mail/deeplink/compose?mailtouri=mailto%3Awattle-academy%40uow.edu.au" target="_blank">submit relevant resources</a>
+        for inclusion.</p>
+        <h4>Journals</h4>
+        <ul>
+            <li style="font-size: 15px"><a href="https://ro.uow.edu.au/jutlp/" target="_blank">JUTLP: UOW Journal of University Teaching & Learning Practice</a></li>
+            <li style="font-size: 15px"><a href="http://ro.uow.edu.au/journals.html" target="_blank">Research Online - JUTLP: UOW Journal of University Teaching & Learning Practice</a></li>
+        </ul>
+        <p class="filledbox">* Journal list developed by Professor Patrick Crookes in conjunction with the UOW Library: maintained and updated by the Library.</p>
+
+        <h4>Professional Development</h4>
+        <ul>
+            <li style="font-size: 15px"><a href="https://intranet.uow.edu.au/login.php?url=/dvce/learningandteaching/index.html?#PDev_LT" target="_blank">Professional Development in Learning & Teaching</a>
+                : LTC provide a range of online modules and workshops to support professional development in Learning & Teaching</li>
+            <li style="font-size: 15px"><a href="https://intranet.uow.edu.au/login.php?url=/dvce/learningandteaching/CPD/index.html?" target="_blank">Accreditation for Learning and Teaching</a>
+                : LTC also offers Continuing Professional Development (L&T) Portfolio accreditation for probation and promotion</li>
+            <li style="font-size: 15px"><a href="https://intranet.uow.edu.au/login.php?url=/dvce/learningandteaching/whoisltc/index.html?" target="_blank">PODS- Professional & Organisational Development Services</a>
+                : offers Staff Development Programs</li>
+        </ul>
+        <p class="filledbox">* UOW’s Learning, Teaching & Curriculum Unit (LTC) support Educational Development, Resource Development, Curriculum Development, Learning Development and Recognition programs</p>
     </div>
     <br/><br/>
-
 </body>
